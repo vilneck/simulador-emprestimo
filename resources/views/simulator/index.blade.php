@@ -45,6 +45,10 @@
                                 <td>Valor:</td>
                                 <td colspan=3 id='car-value'></td>
                             </tr>
+                            <tr>
+                                <td>Descrição:</td>
+                                <td colspan=3 id='car-description'></td>
+                            </tr>
                         </table>
                     </div>
                 </div>
@@ -91,6 +95,7 @@
                             currency: 'BRL'
                         });
                         $('#car-name').html(car.name);
+                        $('#car-description').html(car.description);
                         $('#car-value').html(formatedValue);
                         $('#car-brand').html(car.brand.name);
                     })
@@ -100,7 +105,7 @@
         }
         $(document).ready(function() {
             onChangeCar();
-
+            $('#car').select2();
             $("#entry_value").maskMoney({
                 decimal: ",",
                 thousands: "."

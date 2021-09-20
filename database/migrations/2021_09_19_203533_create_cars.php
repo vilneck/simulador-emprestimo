@@ -15,7 +15,8 @@ class CreateCars extends Migration
     {
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
-            $table->string('name',200);
+            $table->string('name',100);
+            $table->string('description',250);
             $table->unsignedBigInteger('brand_id')->nullable();
             $table->double('value')->nullable();
             $table->softDeletes();

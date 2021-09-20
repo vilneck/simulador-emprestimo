@@ -14,7 +14,7 @@ class BrandSeeder extends Seeder
      */
     public function run()
     {
-        $brands = ['Volkswagen','GM','Tesla','Ford','Renault','Citroen'];
+        $brands = ['Volkswagen','GM','Tesla','Ford','Renault','Citroen','Toyota'];
         foreach($brands as $brand)
         {
             Brand::create(['name'=>$brand]);
