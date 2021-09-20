@@ -1,12 +1,12 @@
 @extends('layout.default')
 
 @section('content')
-    <div class="col-12 ">
+    <div class="col-12">
         <form method="POST" enctype="multipart/form-data">
             @csrf
 
             <div class="row justify-content-center">
-                <div class="col-6">
+                <div class="col-md-8 col-sm-12">
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             @foreach ($errors->all() as $error)
@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-8">
+                <div class="col-md-8 col-sm-12">
                     <label for="car">Selecione o veículo<small class="text-danger">*</small></label>
                     <select onchange="onChangeCar()" id="car" name="car" class="form-select valid">
                         <option value="" disabled="" selected="">Selecione um veículo</option>
@@ -30,7 +30,7 @@
             </div>
             <span class="car-details hidden">
                 <div class="row mt-3 justify-content-center">
-                    <div class="col-8">
+                    <div class="col-md-8 col-sm-12">
                         <label>Detalhes do veículo:</label>
                         <table class="table table-condensed">
                             <tr>
@@ -53,11 +53,11 @@
                     </div>
                 </div>
                 <div class="row justify-content-center align-items-end">
-                    <div class="col-5">
+                    <div class="col-md-5 col-sm-12">
                         <label for="entry_value">Informe o valor de entrada:</label>
                         <input type="text" id="entry_value" name="entry_value" value="{{isset($data)?$data->entry_value:''}}" class="form-control" />
                     </div>
-                    <div class="col-3">
+                    <div class="col-md-3 col-sm-12">
                         <button type="submit" style="margin-bottom:0px;width:100%;"
                             class="button button-rounded button-reveal button-small button-teal"><i
                                 class="icon-dollar"></i><span>Simular</span></a>
@@ -65,7 +65,7 @@
                 </div>
                 @if (isset($html))
                 <div class="row justify-content-center align-items-end mt-3 result">
-                    <div class="col-8 alert alert-info">
+                    <div class="col-md-8 col-sm-12 alert alert-info">
                         <label>Valores simulados para você:</label>
                         <br>
                         {!! $html !!}
