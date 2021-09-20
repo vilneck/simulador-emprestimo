@@ -8,7 +8,11 @@
 </p>
 
 ## Informações
-Uni o útil ao agradável e fiz com base em um tema que comprei, pretendo reaproveitar esse template para criar um site com meu portfólio
+Uni o útil ao agradável e fiz com base em um tema que comprei, pretendo reaproveitar esse template para criar um site com meu portfólio<br>
+<br>
+- Laravel<br>
+- Canvas template<br>
+
 ## Como instalar
 
 1 - Clonar o projeto<br>
