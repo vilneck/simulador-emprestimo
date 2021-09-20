@@ -9,13 +9,12 @@
 
 ## Informações
 Uni o útil ao agradável e fiz com base em um tema que comprei, pretendo reaproveitar esse template para criar um site com meu portfólio<br>
-<br>
 - Laravel<br>
 - Canvas template<br>
 
 ## Como instalar
 
-1 - Clonar o projeto<br>
+1 - Clonar o projeto: git clone git@github.com:vilneck/simulador-emprestimo.git<br>
 2 - Renomear o .env-exemple para .env e altera-lo se necessário, base padrão: car_simulator<br>
 3 - Rodar: composer i<br>
 4 - Rodar: php artisan migrate:fresh --seed<br>
