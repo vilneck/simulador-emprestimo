@@ -23,6 +23,7 @@ class SimulatorController extends Controller
         $selectedCar = Car::findOrFail($data->car);
         $entry_value = FormatHelper::unmaskMoney($data->entry_value);
 
+        //valida se o valor de entrada é menor que o valor do carro
         if($selectedCar->value < $entry_value)
         {
             throw ValidationException::withMessages([
@@ -33,6 +34,7 @@ class SimulatorController extends Controller
         $carTotal = $selectedCar->value;
         $missingTotal = $carTotal - $entry_value;
 
+        //monta um Html com o resultado do financiamento
         $html = '';
         $parcials = [48,12,6];
         foreach($parcials as $parcial)
@@ -41,7 +43,6 @@ class SimulatorController extends Controller
         }
 
         $cars = Car::all();
-
         return view('simulator.index',compact('cars','data','html','selectedCar'));
     }
 }

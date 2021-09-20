@@ -78,12 +78,14 @@
 @endsection
 @section('scripts')
     <script>
+        //função que busca e exibe informações adicionais do carro
         function onChangeCar() {
             let carId = $('#car').val();
             if (carId) {
                 $('.car-details').show();
                 let url = 'api/cars/' + carId
 
+                // Busca dados do carro na api e popula a tabela do mesmo
                 fetch(url).then(response => {
                         return response.json();
                     })
@@ -103,10 +105,11 @@
                 $('.car-details').hide();
             }
         }
+
         $(document).ready(function() {
-            onChangeCar();
-            $('#car').select2();
-            $("#entry_value").maskMoney({
+            onChangeCar(); // Chama a função de buscar detalhes do carro
+            $('#car').select2(); // Ativa o select 2 no campo de carro
+            $("#entry_value").maskMoney({ // Ativa mascara de dinheiro
                 decimal: ",",
                 thousands: "."
             });
