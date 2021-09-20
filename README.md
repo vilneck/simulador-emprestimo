@@ -18,6 +18,6 @@ Uni o útil ao agradável e fiz com base em um tema que comprei, pretendo reapro
 2 - Renomear o .env-exemple para .env e altera-lo se necessário, base padrão: car_simulator<br>
 3 - Rodar: composer i<br>
 4 - Rodar: php artisan migrate:fresh --seed<br>
-5-  Rodar: php artisan key:generate<br>
+5 - Rodar: php artisan key:generate<br>
 6 - Rodar: php artisan serve<br>
 7 - Tudo pronto, agora basta acessar a url http://127.0.0.1:8000/
